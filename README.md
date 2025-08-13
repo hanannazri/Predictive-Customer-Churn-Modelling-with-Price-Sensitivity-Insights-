@@ -40,17 +40,75 @@ Focus retention efforts where they matter most.
 
 ### What This Notebook Does
 
-1. Loads the Data
-2. Reads in the CSV files for both client and price data.
-3. Initial Exploration: Displays the first few rows of each dataset to understand the structure.
-4. Descriptive Statistics: Summarizes the datasets with basic statistics (e.g., mean, min, max, distribution).
-5. Data Visualization: Uses matplotlib and seaborn to create plots and identify patterns or trends.
+*Exploratory Data Analysis and Data Visualisation* folder contains a Jupyter Notebook for analyzing customer churn and price sensitivity in the energy sector.
 
-### How to Use
-Make sure you have Python installed with the following libraries
+It walks through:
+1. Loading client and price data from CSV files.
+2. Exploring the datasets with descriptive statistics and previews.
+3. Visualizing trends (e.g., seasonal price changes, differences between months) to find patterns related to churn.
+4. Laying groundwork for feature engineering and model building for churn prediction.
 
+*Feature Engineering* folder contains a Jupyter Notebook focused on feature engineering for a customer churn and price sensitivity project.
 
+What it does:
 
-For More Clarity
-Go through the notebook step-by-step — each code cell is followed by output or visualizations that explain what’s happening.
+1. Data Loading – Reads client and price datasets using pandas.
+2. Feature Creation – Builds new variables such as:
+2.1 Monthly and yearly price changes.
+2.2 Off-peak vs. peak price differences (e.g., December vs. January).
+2.3 Date-derived fields like year, month, and season.
+3. Data Cleaning – Handles missing values and formats data for analysis.
+4. Visualization – Uses matplotlib and seaborn to check feature distributions and relationships.
+
+These engineered features are intended to be inputs for churn prediction models, helping test whether price sensitivity is a major factor in customer churn.
+ 
+*Model Training and Evaluation* folder contains a Jupyter Notebook for building and evaluating a machine learning classification model.
+
+The workflow includes:
+
+1. Model Training – Trains classification models with scikit-learn Random Forest and XGBoost.
+2. Evaluation – Uses metrics such as confusion matrix, accuracy, precision to assess performance.
+
+The notebook is intended as a complete reference for preprocessing, model building, and evaluation in a predictive analytics project.
+
+### Hybrid Observations – Random Forest vs. XGBoost
+
+1. Consumption & Net Margin Dominate
+
+*Random Forest*: cons_12m, net_margin, and margin_net_pow_ele are the strongest churn indicators, pointing to profitability and annual consumption as key drivers.
+*XGBoost*: Confirms the same dominance but with slightly higher weight given to combined effects of consumption and margin. XGBoost detects more nuanced thresholds where consumption changes cause churn.
+
+Interpretation:
+Extreme consumption (very high or low) and profitability margins correlate with dissatisfaction or higher operational costs, leading to churn.
+
+2. Contract Behavior & Timing Are Crucial
+
+*Random Forest*: months_active, months_modif_prod, months_renewal, and tenure show strong influence, signaling loyalty and commitment patterns.
+*XGBoost*: Places equal emphasis but also identifies interaction effects (e.g., how tenure combined with consumption impacts churn probability).
+
+Interpretation:
+Time-based behavioral patterns — engagement, contract modifications, renewal proximity — heavily influence churn likelihood.
+
+3. Feature Engineering Validated
+
+*Random Forest*: Engineered price-difference and peak usage variants outperform their raw counterparts but rank mid-tier.
+*XGBoost*: Gives slightly higher importance to engineered interaction features, proving boosted trees leverage derived metrics more effectively.
+
+Interpretation:
+Thoughtful feature engineering improves prediction quality for both models, especially for non-linear models like XGBoost.
+
+4. Price Sensitivity = Weak Contributor
+
+*Random Forest*: Price-related features rank in the lower-middle, playing a supporting role.
+*XGBoost*: Same trend, but with better integration into interaction effects (e.g., price × contract length).
+
+Interpretation:
+Price changes alone do not drive churn — they matter more when combined with other stressors like low margins or long tenure.
+
+### Hybrid Conclusion
+
+*Both models pinpoint Consumption, Profitability Margins, and Contract Timing as the dominant churn predictors, with Price Sensitivity playing a secondary role.*
+
+##### For More Clarity
+Go through the notebook step-by-step, each code cell is followed by output or visualizations that explain what’s happening.
 The comments in the code and section headings will guide you through the logic.
