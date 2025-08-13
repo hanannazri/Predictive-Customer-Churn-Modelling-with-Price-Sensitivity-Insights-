@@ -3,7 +3,7 @@
 This project investigates whether price sensitivity is the primary driver of customer churn for an energy provider.
 Our main goal is to model churn probabilities and understand the extent to which changes in electricity and gas prices influence customer behavior.
 
-### Project Background
+## Project Background
 
 Customer churn, when a client stops doing business with a company, can be influenced by many factors, such as industry type, usage patterns, service experience, or price changes.
 We aim to test the hypothesis:
@@ -16,31 +16,30 @@ To do this, we:
 
                 Price Elasticity = % change in quantity demanded/ % change in price
 
-Elastic (> 1) → Demand changes a lot when prices change.
-Inelastic (< 1) → Demand changes little when prices change.
+   a.Elastic (> 1) → Demand changes a lot when prices change. 
+   b.Inelastic (< 1) → Demand changes little when prices change.
 
 2. Prepare and engineer features from historical client, price, and churn data.
-
 3. Train classification models Random Forest and XGboost to predict churn likelihood.
-
 4. Identify how strongly price sensitivity affects churn compared to other factors.
 
-### Key Data Sources
+## Key Data Sources
 
 Customer Data – Characteristics such as industry, electricity consumption history, and join date.
 Churn Data – Indicators showing whether a customer has churned.
 Historical Price Data – Electricity and gas prices for each customer at granular time intervals.
 
-### Why This Matters
+## Why This Matters
 
 Understanding whether churn is driven by price sensitivity helps the company:
 Set better pricing strategies.
 Identify at-risk customers earlier.
 Focus retention efforts where they matter most.
 
-### What This Notebook Does
+## What This Notebook Does
 
-*Exploratory Data Analysis and Data Visualisation* folder contains a Jupyter Notebook for analyzing customer churn and price sensitivity in the energy sector.
+### *Exploratory Data Analysis and Data Visualisation*
+This file contains a Jupyter Notebook for analyzing customer churn and price sensitivity in the energy sector.
 
 It walks through:
 1. Loading client and price data from CSV files.
@@ -48,7 +47,8 @@ It walks through:
 3. Visualizing trends (e.g., seasonal price changes, differences between months) to find patterns related to churn.
 4. Laying groundwork for feature engineering and model building for churn prediction.
 
-*Feature Engineering* folder contains a Jupyter Notebook focused on feature engineering for a customer churn and price sensitivity project.
+### *Feature Engineering* 
+This file contains a Jupyter Notebook focused on feature engineering for a customer churn and price sensitivity project.
 
 What it does:
 
@@ -62,7 +62,8 @@ What it does:
 
 These engineered features are intended to be inputs for churn prediction models, helping test whether price sensitivity is a major factor in customer churn.
  
-*Model Training and Evaluation* folder contains a Jupyter Notebook for building and evaluating a machine learning classification model.
+### *Model Training and Evaluation*
+This file contains a Jupyter Notebook for building and evaluating a machine learning classification model.
 
 The workflow includes:
 
@@ -71,7 +72,7 @@ The workflow includes:
 
 The notebook is intended as a complete reference for preprocessing, model building, and evaluation in a predictive analytics project.
 
-### Hybrid Observations – Random Forest vs. XGBoost
+## Hybrid Observations – Random Forest vs. XGBoost
 
 1. Consumption & Net Margin Dominate
 
@@ -105,10 +106,43 @@ Thoughtful feature engineering improves prediction quality for both models, espe
 Interpretation:
 Price changes alone do not drive churn — they matter more when combined with other stressors like low margins or long tenure.
 
-### Hybrid Conclusion
+## Hybrid Conclusion
 
-*Both models pinpoint Consumption, Profitability Margins, and Contract Timing as the dominant churn predictors, with Price Sensitivity playing a secondary role.*
+### *Both models pinpoint Consumption, Profitability Margins, and Contract Timing as the dominant churn predictors, with Price Sensitivity playing a secondary role.*
 
-##### For More Clarity
+### Quick Start
+
+1️. Unzip the whole repository and make it your current working directory.
+
+If downloaded as a ZIP:
+
+                                          unzip repository.zip
+                                          cd repository-folder
+
+Or clone directly from Git:
+
+                                           git clone <repo-link>
+                                           cd repository-folder
+
+2. Install all the required dependencies using the requirements.txt file: Open a terminal in your OS (Command Prompt, PowerShell, or Terminal on Linux/Mac) and type:   
+
+                                       pip install -r requirements.txt
+
+3️. Open the Jupyter Notebook: In the terminal, type:
+
+                                              jupyter notebook
+This will open the Jupyter interface in your browser.
+
+4. Run the Notebook:
+Open the provided .ipynb file from the repository.
+Click Run All to execute all cells sequentially.
+
+The notebook will:
+Load and preprocess the dataset.
+Perform data visualization and exploratory analysis.
+Train machine learning models.
+Output performance metrics and graphs.
+
+### For More Clarity
 Go through the notebook step-by-step, each code cell is followed by output or visualizations that explain what’s happening.
 The comments in the code and section headings will guide you through the logic.
