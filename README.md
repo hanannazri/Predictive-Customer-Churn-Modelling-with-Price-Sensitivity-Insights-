@@ -72,45 +72,7 @@ The workflow includes:
 
 The notebook is intended as a complete reference for preprocessing, model building, and evaluation in a predictive analytics project.
 
-## Hybrid Observations – Random Forest vs. XGBoost
-
-1. Consumption & Net Margin Dominate
-
-*Random Forest*: cons_12m, net_margin, and margin_net_pow_ele are the strongest churn indicators, pointing to profitability and annual consumption as key drivers.
-*XGBoost*: Confirms the same dominance but with slightly higher weight given to combined effects of consumption and margin. XGBoost detects more nuanced thresholds where consumption changes cause churn.
-
-Interpretation:
-Extreme consumption (very high or low) and profitability margins correlate with dissatisfaction or higher operational costs, leading to churn.
-
-2. Contract Behavior & Timing Are Crucial
-
-*Random Forest*: months_active, months_modif_prod, months_renewal, and tenure show strong influence, signaling loyalty and commitment patterns.
-*XGBoost*: Places equal emphasis but also identifies interaction effects (e.g., how tenure combined with consumption impacts churn probability).
-
-Interpretation:
-Time-based behavioral patterns — engagement, contract modifications, renewal proximity — heavily influence churn likelihood.
-
-3. Feature Engineering Validated
-
-*Random Forest*: Engineered price-difference and peak usage variants outperform their raw counterparts but rank mid-tier.
-*XGBoost*: Gives slightly higher importance to engineered interaction features, proving boosted trees leverage derived metrics more effectively.
-
-Interpretation:
-Thoughtful feature engineering improves prediction quality for both models, especially for non-linear models like XGBoost.
-
-4. Price Sensitivity = Weak Contributor
-
-*Random Forest*: Price-related features rank in the lower-middle, playing a supporting role.
-*XGBoost*: Same trend, but with better integration into interaction effects (e.g., price × contract length).
-
-Interpretation:
-Price changes alone do not drive churn — they matter more when combined with other stressors like low margins or long tenure.
-
-## Hybrid Conclusion
-
-### *Both models pinpoint Consumption, Profitability Margins, and Contract Timing as the dominant churn predictors, with Price Sensitivity playing a secondary role.*
-
-### Quick Start
+## How To Use this
 
 1️. Unzip the whole repository and make it your current working directory.
 
@@ -134,14 +96,55 @@ Or clone directly from Git:
 This will open the Jupyter interface in your browser.
 
 4. Run the Notebook:
-Open the provided .ipynb file from the repository.
-Click Run All to execute all cells sequentially.
+Open the provided .ipynb file from the repository. Click Run All to execute all cells sequentially.
 
 The notebook will:
 Load and preprocess the dataset.
 Perform data visualization and exploratory analysis.
 Train machine learning models.
 Output performance metrics and graphs.
+
+## Hybrid Observations – Random Forest vs. XGBoost
+
+1. Consumption & Net Margin Dominate
+
+*Random Forest*: cons_12m, net_margin, and margin_net_pow_ele are the strongest churn indicators, pointing to profitability and annual consumption as key drivers.
+
+*XGBoost*: Confirms the same dominance but with slightly higher weight given to combined effects of consumption and margin. XGBoost detects more nuanced thresholds where consumption changes cause churn.
+
+Interpretation:
+Extreme consumption (very high or low) and profitability margins correlate with dissatisfaction or higher operational costs, leading to churn.
+
+2. Contract Behavior & Timing Are Crucial
+
+*Random Forest*: months_active, months_modif_prod, months_renewal, and tenure show strong influence, signaling loyalty and commitment patterns.
+
+*XGBoost*: Places equal emphasis but also identifies interaction effects (e.g., how tenure combined with consumption impacts churn probability).
+
+Interpretation:
+Time-based behavioral patterns — engagement, contract modifications, renewal proximity — heavily influence churn likelihood.
+
+3. Feature Engineering Validated
+
+*Random Forest*: Engineered price-difference and peak usage variants outperform their raw counterparts but rank mid-tier.
+
+*XGBoost*: Gives slightly higher importance to engineered interaction features, proving boosted trees leverage derived metrics more effectively.
+
+Interpretation:
+Thoughtful feature engineering improves prediction quality for both models, especially for non-linear models like XGBoost.
+
+4. Price Sensitivity = Weak Contributor
+
+*Random Forest*: Price-related features rank in the lower-middle, playing a supporting role.
+
+*XGBoost*: Same trend, but with better integration into interaction effects (e.g., price × contract length).
+
+Interpretation:
+Price changes alone do not drive churn — they matter more when combined with other stressors like low margins or long tenure.
+
+## Hybrid Conclusion
+
+### *Both models pinpoint Consumption, Profitability Margins, and Contract Timing as the dominant churn predictors, with Price Sensitivity playing a secondary role.*
 
 ### For More Clarity
 Go through the notebook step-by-step, each code cell is followed by output or visualizations that explain what’s happening.
