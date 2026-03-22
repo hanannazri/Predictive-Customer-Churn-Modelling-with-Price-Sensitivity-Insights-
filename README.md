@@ -92,7 +92,7 @@ The company is facing unexpected customer churn, but lacks clarity on:
 
 *Insight: Outliers represent high-value customers, not noise. So  it should NOT be blindly removed*
 
-**. Churn vs Gas usage Behavior**
+**4. Churn vs Gas usage Behavior**
 
 - Churned customers show different usage trends
 
@@ -107,25 +107,47 @@ The company is facing unexpected customer churn, but lacks clarity on:
 *Insight:Consumption behavior can act as an early churn signal*
 *Behavioral patterns differ between churned vs retained users*
 
-**5. Time Based Analysis**
+**5. Tenure dependence on churn**
+
+<p align="center">
+  <img src="images/tenure.png" width=700/>
+</p>
+
+<p align="center">
+  <em>Figure 5: Tenure v/s Churn</em>
+</p>
+
+**6. Customer Engagement v/s Churn**
+
+<p align="center">
+  <img src="images/products.png" width=700/>
+</p>
+
+<p align="center">
+  <em>Figure 6: No.of products used v/s Churn</em>
+</p>
+
+**7. Time Based Analysis**
 
 <p align="center">
   <img src="images/time_analysis.png" width=700>
 </p>
 
 <p align="center">
-  <em>Figure 5: Time Based Analysis</em>
+  <em>Figure 7: Time Based Analysis</em>
 </p
 
-**6. Fixed vs Variable Price Analysis**
+**8. Fixed vs Variable Price Analysis**
 
 <p align="center">
   <img src="images/fix_var_analysis.png" width=500>
 </p>
 
 <p align="center">
-  <em>Figure 6:Fixed vs Variable Price Analysis </em>
+  <em>Figure 8:Fixed vs Variable Price Analysis </em>
 </p>
+
+*Check the notebook for more detailed analysis*
 
 ## **Business Impact**
 
