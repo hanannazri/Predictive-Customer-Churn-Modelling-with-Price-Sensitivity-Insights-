@@ -92,16 +92,16 @@ The company is facing unexpected customer churn, but lacks clarity on:
 
 *Insight: Outliers represent high-value customers, not noise. So  it should NOT be blindly removed*
 
-**. Churn vs Consumption Behavior**
+**. Churn vs Gas usage Behavior**
 
 - Churned customers show different usage trends
 
 <p align="center">
-  <img src="images/t.png" width=47%/>
+  <img src="images/churn_gas.png" width=47%/>
 </p>
 
 <p align="center">
-  <em>Figure 4: Time Based Analysis</em>
+  <em>Figure 4: hurn vs Gas customers</em>
 </p
 
 *Insight:Consumption behavior can act as an early churn signal*
