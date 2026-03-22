@@ -160,9 +160,9 @@ Price changes alone do not drive churn — they matter more when combined with o
 
 ## Hybrid Conclusion
 
-### *Both models pinpoint Consumption, Profitability Margins, and Contract Timing as the dominant churn predictors, with Price Sensitivity playing a secondary role.*
+*Both models pinpoint Consumption, Profitability Margins, and Contract Timing as the dominant churn predictors, with Price Sensitivity playing a secondary role.*
 
-### **Directions to run the code**
+## **Directions to run the code**
 
 1. Unzip the whole repository and make it your current directory 
 2. Install all the required dependencies using the pip install -r requirements.txt
@@ -177,9 +177,9 @@ Perform data visualization and exploratory analysis.
 Train machine learning models.
 Output performance metrics and graphs.
 
-### **Project Structure**
+## **Project Structure**
 
 
-#### **Author**
+## **Author**
 **Hanan**
 *Data Science | Machine Learning | Analytics*
