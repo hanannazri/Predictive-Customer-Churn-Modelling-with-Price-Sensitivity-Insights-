@@ -11,7 +11,7 @@ In the energy and utilities industry, customer churn is a high-cost problem due 
 
 *Even a small increase in churn can lead to millions in revenue loss annually.*
 
-### **Problem Statement**
+## **Problem Statement**
 
 The company is facing unexpected customer churn, but lacks clarity on:
 
@@ -22,7 +22,7 @@ The company is facing unexpected customer churn, but lacks clarity on:
 
 *This project aims to bridge that gap using data.*
 
-### **Project Roadmap**
+## **Project Roadmap**
 
 | Stage                   | Description                        | 
 | ----------------------- | ---------------------------------- | 
@@ -31,16 +31,18 @@ The company is facing unexpected customer churn, but lacks clarity on:
 | Modeling             | ML model building                  | 
 | Evaluation           | Model performance & insights       |
 
-*Tech Stack: Python, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook*
+### Tech Stack
 
-### **Dataset**
+*Python, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook*
+
+## **Dataset**
 
 | Dataset           | Description                            |
 | ----------------- | -------------------------------------- |
 | `client_data.csv` | Customer consumption, forecasts, churn |
 | `price_data.csv`  | Time-based electricity pricing         |
 
-### **Exploratory Data Analysis & Data Visualisation**
+## **Exploratory Data Analysis & Data Visualisation**
 
 **1️. Churn Distribution (Class Imbalance)**
 
@@ -84,7 +86,7 @@ The company is facing unexpected customer churn, but lacks clarity on:
 *Insight: Pricing likely plays a role in churn decisions*
 *Customers might react to peak/off-peak differences*
 
-**Business Impact**
+## **Business Impact**
 
 This analysis enables:
 
@@ -93,9 +95,7 @@ This analysis enables:
 - Better customer segmentation
 - Strong foundation for predictive churn models
 
-
-
-### *Feature Engineering* 
+## **Feature Engineering** 
 This file contains a Jupyter Notebook focused on feature engineering for a customer churn and price sensitivity project.
 
 What it does:
@@ -110,7 +110,7 @@ What it does:
 
 These engineered features are intended to be inputs for churn prediction models, helping test whether price sensitivity is a major factor in customer churn.
  
-### *Model Training and Evaluation*
+## **Model Training and Evaluation**
 This file contains a Jupyter Notebook for building and evaluating a machine learning classification model.
 
 The workflow includes:
@@ -119,38 +119,6 @@ The workflow includes:
 2. Evaluation – Uses metrics such as confusion matrix, accuracy, precision to assess performance.
 
 The notebook is intended as a complete reference for preprocessing, model building, and evaluation in a predictive analytics project.
-
-## How To Use this
-
-1️. Unzip the whole repository and make it your current working directory.
-
-If downloaded as a ZIP:
-
-                                          unzip repository.zip
-                                          cd repository-folder
-
-Or clone directly from Git:
-
-                                           git clone <repo-link>
-                                           cd repository-folder
-
-2. Install all the required dependencies using the requirements.txt file: Open a terminal in your OS (Command Prompt, PowerShell, or Terminal on Linux/Mac) and type:   
-
-                                       pip install -r requirements.txt
-
-3️. Open the Jupyter Notebook: In the terminal, type:
-
-                                              jupyter notebook
-This will open the Jupyter interface in your browser.
-
-4. Run the Notebook:
-Open the provided .ipynb file from the repository. Click Run All to execute all cells sequentially.
-
-The notebook will:
-Load and preprocess the dataset.
-Perform data visualization and exploratory analysis.
-Train machine learning models.
-Output performance metrics and graphs.
 
 ## Hybrid Observations – Random Forest vs. XGBoost
 
@@ -202,6 +170,12 @@ Price changes alone do not drive churn — they matter more when combined with o
 
                    imports → Exploratory Data Analysis & Visualisation → Feature Engineering
                               Post EDA → Model Training & Prediction → Evaluation
+
+The notebook will:
+Load and preprocess the dataset.
+Perform data visualization and exploratory analysis.
+Train machine learning models.
+Output performance metrics and graphs.
 
 ### **Project Structure**
 
