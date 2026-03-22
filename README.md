@@ -60,11 +60,26 @@ The company is facing unexpected customer churn, but lacks clarity on:
 *Insight: Severe imbalance → model must handle bias toward majority class*
 *Churn is rare but business-critical*
 
-**2️. Electricity Consumption Distribution**
+**2️. Consumption Distribution**
 
 - Highly right-skewed
 - Few customers consume significantly more energy
 
+<p align="center">
+  <img src="images/electricity_consumption.png" width="500"/>
+</p>
+
+<p align="center">
+  <em>Figure 2: Electricity Consumption</em>
+</p>
+
+<p align="center">
+  <img src="images/gas_consumption.png" width="500"/>
+</p>
+
+<p align="center">
+  <em>Figure 3: Gas_Consumption</em>
+</p>
 *Insight: Indicates distinct customer segments (residential vs industrial)*
 *Consumption varies drastically across customers*
 
