@@ -117,6 +117,8 @@ The company is facing unexpected customer churn, but lacks clarity on:
   <em>Figure 5: Tenure v/s Churn</em>
 </p>
 
+*Insight: Newer customers are significantly more likely to leave than long-term customers*
+
 **6. Customer Engagement v/s Churn**
 
 <p align="center">
@@ -126,6 +128,8 @@ The company is facing unexpected customer churn, but lacks clarity on:
 <p align="center">
   <em>Figure 6: No.of products used v/s Churn</em>
 </p>
+
+*Insight: The number of products alone does not show a strong or consistent relationship with churn in its raw form.*
 
 **7. Time Based Analysis**
 
@@ -137,6 +141,8 @@ The company is facing unexpected customer churn, but lacks clarity on:
   <em>Figure 7: Time Based Analysis</em>
 </p
 
+*Insight: Variable prices show very low variance across time, Fixed prices dominate the pricing structure, and Fixed prices dominate the pricing structure .*
+
 **8. Fixed vs Variable Price Analysis**
 
 <p align="center">
@@ -146,6 +152,8 @@ The company is facing unexpected customer churn, but lacks clarity on:
 <p align="center">
   <em>Figure 8:Fixed vs Variable Price Analysis </em>
 </p>
+
+*Insights: Fixed and variable prices are partially independent, Clustering pattern confirms customer segmentation in pricing models*
 
 *Check the notebook for more detailed analysis*
 
