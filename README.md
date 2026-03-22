@@ -50,7 +50,7 @@ The company is facing unexpected customer churn, but lacks clarity on:
 - Around 10% customers churned
 
 <p align="center">
-  <img src="images/churn_distribution.png" width="700"/>
+  <img src="images/churn_distribution.png" width="500"/>
 </p>
 
 <p align="center">
