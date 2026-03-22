@@ -82,7 +82,7 @@ The company is facing unexpected customer churn, but lacks clarity on:
 - Aroun 14% outliers identified
 
 <p align="center">
-  <img src="images/electricity_outlier.png" width=47%/>
+  <img src="images/electricity_outlier.png" width=45%/>
   <img src="images/gas_outlier.png" width=45%>
 </p>
 
@@ -97,7 +97,7 @@ The company is facing unexpected customer churn, but lacks clarity on:
 - Churned customers show different usage trends
 
 <p align="center">
-  <img src="images/churn_gas.png" width=47%/>
+  <img src="images/churn_gas.png" width=700/>
 </p>
 
 <p align="center">
@@ -110,7 +110,7 @@ The company is facing unexpected customer churn, but lacks clarity on:
 **5. Time Based Analysis**
 
 <p align="center">
-  <img src="images/time_analysis.png" width=47%/>
+  <img src="images/time_analysis.png" width=700>
 </p>
 
 <p align="center">
@@ -120,7 +120,7 @@ The company is facing unexpected customer churn, but lacks clarity on:
 **6. Fixed vs Variable Price Analysis**
 
 <p align="center">
-  <img src="images/fix_var_analysis.png" width=47%/>
+  <img src="images/fix_var_analysis.png" width=500>
 </p>
 
 <p align="center">
