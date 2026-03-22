@@ -1,51 +1,99 @@
-# Predictive-Customer-Churn-Modelling-with-Price-Sensitivity-Insights
+# **Customer-Churn-Perdiction-with-Price-Sensitivity-Insights**
 
-This project investigates whether price sensitivity is the primary driver of customer churn for an energy provider.
-Our main goal is to model churn probabilities and understand the extent to which changes in electricity and gas prices influence customer behavior.
+### **Business Overview**
 
-## Project Background
+In the energy and utilities industry, customer churn is a high-cost problem due to:
 
-Customer churn, when a client stops doing business with a company, can be influenced by many factors, such as industry type, usage patterns, service experience, or price changes.
-We aim to test the hypothesis:
+- High acquisition costs per customer
+- Long contract cycles
+- Thin profit margins
+- Increasing competition in deregulated markets
 
-### *"Customers with higher price sensitivity are more likely to churn."*
+*Even a small increase in churn can lead to millions in revenue loss annually.*
 
-To do this, we:
+### **Problem Statement**
 
-1. Define price sensitivity and calculate it using the price elasticity of demand formula:
+The company is facing unexpected customer churn, but lacks clarity on:
 
-                Price Elasticity = % change in quantity demanded/ % change in price
+- What type of customers are leaving
+- Whether pricing impacts churn decisions
+- How consumption behavior relates to churn
+- Which customers are at risk before they leave
 
-   a.Elastic (> 1) → Demand changes a lot when prices change. 
-   b.Inelastic (< 1) → Demand changes little when prices change.
+*This project aims to bridge that gap using data.*
 
-2. Prepare and engineer features from historical client, price, and churn data.
-3. Train classification models Random Forest and XGboost to predict churn likelihood.
-4. Identify how strongly price sensitivity affects churn compared to other factors.
+### **Project Roadmap**
 
-## Key Data Sources
+| Stage                   | Description                        | 
+| ----------------------- | ---------------------------------- | 
+| EDA & Visualisation      | Data understanding & visualization | 
+| Feature Engineering | Feature creation & transformation  | 
+| Modeling             | ML model building                  | 
+| Evaluation           | Model performance & insights       |
 
-Customer Data – Characteristics such as industry, electricity consumption history, and join date.
-Churn Data – Indicators showing whether a customer has churned.
-Historical Price Data – Electricity and gas prices for each customer at granular time intervals.
+*Tech Stack: Python, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook*
 
-## Why This Matters
+### **Dataset**
 
-Understanding whether churn is driven by price sensitivity helps the company:
-Set better pricing strategies.
-Identify at-risk customers earlier.
-Focus retention efforts where they matter most.
+| Dataset           | Description                            |
+| ----------------- | -------------------------------------- |
+| `client_data.csv` | Customer consumption, forecasts, churn |
+| `price_data.csv`  | Time-based electricity pricing         |
 
-## What This Notebook Does
+### **Exploratory Data Analysis & Data Visualisation**
 
-### *Exploratory Data Analysis and Data Visualisation*
-This file contains a Jupyter Notebook for analyzing customer churn and price sensitivity in the energy sector.
+**1️. Churn Distribution (Class Imbalance)**
 
-It walks through:
-1. Loading client and price data from CSV files.
-2. Exploring the datasets with descriptive statistics and previews.
-3. Visualizing trends (e.g., seasonal price changes, differences between months) to find patterns related to churn.
-4. Laying groundwork for feature engineering and model building for churn prediction.
+- Around 90% customers retained
+- Around 10% customers churned
+
+<p align="center">
+  <img src="images/churn_distribution.png" width="700"/>
+</p>
+
+<p align="center">
+  <em>Figure 1: Churn Distribution</em>
+</p>
+
+*Insight: Severe imbalance → model must handle bias toward majority class*
+*Churn is rare but business-critical*
+
+**2️. Electricity Consumption Distribution**
+
+- Highly right-skewed
+- Few customers consume significantly more energy
+
+*Insight: Indicates distinct customer segments (residential vs industrial)*
+*Consumption varies drastically across customers*
+
+**3️. Outlier Detection**
+
+- Aroun 14% outliers identified
+
+*Insight: Outliers represent high-value customers, not noise. So  it should NOT be blindly removed*
+
+**. Churn vs Consumption Behavior**
+
+- Churned customers show different usage trends
+
+*Insight:Consumption behavior can act as an early churn signal*
+*Behavioral patterns differ between churned vs retained users*
+
+**5️. Price Sensitivity Analysis**
+
+*Insight: Pricing likely plays a role in churn decisions*
+*Customers might react to peak/off-peak differences*
+
+**Business Impact**
+
+This analysis enables:
+
+- Targeted retention campaigns
+- Protection of high-value customers
+- Better customer segmentation
+- Strong foundation for predictive churn models
+
+
 
 ### *Feature Engineering* 
 This file contains a Jupyter Notebook focused on feature engineering for a customer churn and price sensitivity project.
@@ -146,6 +194,18 @@ Price changes alone do not drive churn — they matter more when combined with o
 
 ### *Both models pinpoint Consumption, Profitability Margins, and Contract Timing as the dominant churn predictors, with Price Sensitivity playing a secondary role.*
 
-### For More Clarity
-Go through the notebook step-by-step, each code cell is followed by output or visualizations that explain what’s happening.
-The comments in the code and section headings will guide you through the logic.
+### **Directions to run the code**
+
+1. Unzip the whole repository and make it your current directory 
+2. Install all the required dependencies using the pip install -r requirements.txt
+3. Run the file in the following order:
+
+                   imports → Exploratory Data Analysis & Visualisation → Feature Engineering
+                              Post EDA → Model Training & Prediction → Evaluation
+
+### **Project Structure**
+
+
+#### **Author**
+**Hanan**
+*Data Science | Machine Learning | Analytics*
