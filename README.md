@@ -71,7 +71,7 @@ The company is facing unexpected customer churn, but lacks clarity on:
 </p>
 
 <p align="center">
-  <em>Figure 2: Consumption Dsitribution</em>
+  <em>Figure 2: Consumption Distribution</em>
 </p>
 
 *Insight: Indicates distinct customer segments (residential vs industrial)*
@@ -81,19 +81,51 @@ The company is facing unexpected customer churn, but lacks clarity on:
 
 - Aroun 14% outliers identified
 
+<p align="center">
+  <img src="images/electricity_outlier.png" width=47%/>
+  <img src="images/gas_outlier.png" width=45%>
+</p>
+
+<p align="center">
+  <em>Figure 3: Outlier Distribution</em>
+</p>
+
 *Insight: Outliers represent high-value customers, not noise. So  it should NOT be blindly removed*
 
 **. Churn vs Consumption Behavior**
 
 - Churned customers show different usage trends
 
+<p align="center">
+  <img src="images/t.png" width=47%/>
+</p>
+
+<p align="center">
+  <em>Figure 4: Time Based Analysis</em>
+</p
+
 *Insight:Consumption behavior can act as an early churn signal*
 *Behavioral patterns differ between churned vs retained users*
 
-**5️. Price Sensitivity Analysis**
+**5. Time Based Analysis**
 
-*Insight: Pricing likely plays a role in churn decisions*
-*Customers might react to peak/off-peak differences*
+<p align="center">
+  <img src="images/time_analysis.png" width=47%/>
+</p>
+
+<p align="center">
+  <em>Figure 5: Time Based Analysis</em>
+</p
+
+**6. Fixed vs Variable Price Analysis**
+
+<p align="center">
+  <img src="images/fix_var_analysis.png" width=47%/>
+</p>
+
+<p align="center">
+  <em>Figure 6:Fixed vs Variable Price Analysis </em>
+</p>
 
 ## **Business Impact**
 
