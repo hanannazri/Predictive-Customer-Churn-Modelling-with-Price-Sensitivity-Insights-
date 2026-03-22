@@ -67,18 +67,11 @@ The company is facing unexpected customer churn, but lacks clarity on:
 
 <p align="center">
   <img src="images/electricity_consumption.png" width="800"/>
+  <img src="images/gas_consumption.png" width="500"/>
 </p>
 
 <p align="center">
-  <em>Figure 2: Electricity Consumption</em>
-</p>
-
-<p align="center">
-  <img src="images/gas_consumption.png" width="800"/>
-</p>
-
-<p align="center">
-  <em>Figure 3: Gas_Consumption</em>
+  <em>Figure 2: Consumption Dsitribution</em>
 </p>
 
 *Insight: Indicates distinct customer segments (residential vs industrial)*
