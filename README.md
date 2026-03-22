@@ -1,6 +1,6 @@
 # **Customer-Churn-Perdiction-with-Price-Sensitivity-Insights**
 
-### **Business Overview**
+## **Business Overview**
 
 In the energy and utilities industry, customer churn is a high-cost problem due to:
 
