@@ -80,6 +80,7 @@ The company is facing unexpected customer churn, but lacks clarity on:
 <p align="center">
   <em>Figure 3: Gas_Consumption</em>
 </p>
+
 *Insight: Indicates distinct customer segments (residential vs industrial)*
 *Consumption varies drastically across customers*
 
