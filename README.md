@@ -66,7 +66,7 @@ The company is facing unexpected customer churn, but lacks clarity on:
 - Few customers consume significantly more energy
 
 <p align="center">
-  <img src="images/electricity_consumption.png" width=45%/>
+  <img src="images/electricity_consumption.png" width=48%/>
   <img src="images/gas_consumption.png" width=45%>
 </p>
 
