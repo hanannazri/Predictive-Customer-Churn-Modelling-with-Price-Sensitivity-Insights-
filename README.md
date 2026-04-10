@@ -132,9 +132,9 @@ Metrics used:
 ---
 
 ## 📁 Project Structure
-                      customer-churn-prediction/
-                      │
-                      ├── notebooks/
+customer-churn-prediction/
+│
+├── notebooks/
                       │ └── analysis_and_modelling.ipynb
                       │
                       ├── data/
@@ -156,8 +156,17 @@ jupyter notebook
 
 ## 🌟 Key Takeaway
 
-This project demonstrates the ability to:
-> Work with real-world, messy, imbalanced data
-> Perform deep exploratory data analysis
-> Build and evaluate machine learning models
-> Translate technical results into business insights
+> This project demonstrates the ability to:
+> - Handle real-world imbalanced datasets  
+> - Extract meaningful insights beyond model performance  
+> - Build and evaluate machine learning models critically  
+> - Translate data findings into actionable business strategies
+
+---
+
+## 📬 Contact
+
+- Name: Hanan
+- LinkedIn: https://linkedin.com/in/hanan_nazri
+- GitHub: https://github.com/hanannazri 
+- Email: hanankp283@gmail.com 
