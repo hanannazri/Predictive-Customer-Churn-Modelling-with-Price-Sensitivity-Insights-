@@ -2,6 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python)
 ![ML](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange)
+![Random Forest](https://img.shields.io/badge/Model-RandomForest-blue)
 ![XGBoost](https://img.shields.io/badge/Model-XGBoost-green)
 ![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
 
@@ -86,10 +87,10 @@ Metrics used:
 
 ## 📊 Model Comparison
 
-    | Model          | Precision (Churn) | Recall (Churn) | F1-score |
-    |----------------|------------------|----------------|----------|
-    | Random Forest  | 0.28             | 0.34           | 0.30     |
-    | XGBoost        | 0.33             | 0.30           | 0.31     |
+| Model          | Precision (Churn) | Recall (Churn) | F1-score |
+|----------------|------------------|----------------|----------|
+| Random Forest  | 0.28             | 0.34           | 0.30     |
+| XGBoost        | 0.33             | 0.30           | 0.31     |
 
 **Key Insight:**  
 - Both models struggle to effectively identify churners due to severe class imbalance.  
@@ -142,9 +143,6 @@ Metrics used:
                       ├── README.md
                       └── requirements.txt
 
------
-
-
 ---
 
 ## ▶️ How to Run
@@ -153,8 +151,9 @@ git clone https://github.com/YOUR_USERNAME/customer-churn-prediction.git
 cd customer-churn-prediction
 pip install -r requirements.txt
 jupyter notebook
-
+```
 ---
+
 ## 🌟 Key Takeaway
 
 This project demonstrates the ability to:
