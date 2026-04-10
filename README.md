@@ -34,10 +34,10 @@ The goal is not just to build a machine learning model, but to understand why cu
 ---
 
 ## 📂 Dataset Description
-The project uses multiple datasets including:
-- Customer information  
-- Energy consumption data (electricity & gas)  
-- Pricing-related features  
+
+The Multiple datasets includes:
+- ~14,600 customers  
+- ~193,000 pricing records  
 
 ### Key Characteristics:
 - Highly imbalanced dataset (~90% non-churn)  
