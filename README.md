@@ -5,16 +5,12 @@ This project focuses on predicting customer churn and uncovering actionable busi
 
 The goal is not just to build a machine learning model, but to understand why customers churn and how businesses can reduce it.
 
----
-
 ## 🎯 Objective
 - Predict customers who are likely to churn  
 - Identify key drivers behind churn behavior  
 - Translate data insights into business recommendations  
 
----
-
-## ⚡ TL;DR (Key Insights)
+## ⚡ Key Insights (TL;DR)
 - Customers with low tenure are significantly more likely to churn  
 - Energy consumption has weak correlation with churn  
 - Pricing variables show limited predictive power  
@@ -22,8 +18,6 @@ The goal is not just to build a machine learning model, but to understand why cu
 - XGBoost slightly outperforms Random Forest, but recall remains low  
 
 👉 **Business Focus:** Improve early-stage customer experience to reduce churn  
-
----
 
 ## 📂 Dataset Description
 The project uses multiple datasets including:
@@ -35,8 +29,6 @@ The project uses multiple datasets including:
 - Highly imbalanced dataset (~90% non-churn)  
 - Mix of numerical and categorical features  
 - Presence of skewness and outliers  
-
----
 
 ## 🔍 Exploratory Data Analysis (EDA)
 
