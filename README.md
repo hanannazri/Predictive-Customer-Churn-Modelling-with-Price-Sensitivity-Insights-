@@ -22,7 +22,7 @@ The goal is not just to build a machine learning model, but to understand why cu
 
 ---
 
-## ⚡ TL;DR (Key Insights)
+## ⚡ Key Insights (TL;DR)
 - Customers with low tenure are significantly more likely to churn  
 - Energy consumption has weak correlation with churn  
 - Pricing variables show limited predictive power  
