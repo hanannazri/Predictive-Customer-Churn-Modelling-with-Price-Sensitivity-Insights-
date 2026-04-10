@@ -85,6 +85,8 @@ Metrics used:
 - F1-score  
 - Confusion Matrix
 
+> ⚠️ Accuracy is not a reliable metric here due to class imbalance, making recall a more critical measure.
+
 ## 📊 Model Comparison
 
 | Model          | Precision (Churn) | Recall (Churn) | F1-score |
@@ -132,9 +134,9 @@ Metrics used:
 ---
 
 ## 📁 Project Structure
-customer-churn-prediction/
-│
-├── notebooks/
+                      customer-churn-prediction/
+                      │
+                      ├── notebooks/
                       │ └── analysis_and_modelling.ipynb
                       │
                       ├── data/
