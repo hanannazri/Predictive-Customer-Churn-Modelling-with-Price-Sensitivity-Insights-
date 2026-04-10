@@ -1,16 +1,27 @@
 # 📊 Customer Churn Prediction & Business Insights
 
+![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python)
+![ML](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange)
+![XGBoost](https://img.shields.io/badge/Model-XGBoost-green)
+![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
+
+---
+
 ## 🚀 Overview
 This project focuses on predicting customer churn and uncovering actionable business insights using real-world, imbalanced data.
 
 The goal is not just to build a machine learning model, but to understand why customers churn and how businesses can reduce it.
+
+---
 
 ## 🎯 Objective
 - Predict customers who are likely to churn  
 - Identify key drivers behind churn behavior  
 - Translate data insights into business recommendations  
 
-## ⚡ Key Insights (TL;DR)
+---
+
+## ⚡ TL;DR (Key Insights)
 - Customers with low tenure are significantly more likely to churn  
 - Energy consumption has weak correlation with churn  
 - Pricing variables show limited predictive power  
@@ -18,6 +29,8 @@ The goal is not just to build a machine learning model, but to understand why cu
 - XGBoost slightly outperforms Random Forest, but recall remains low  
 
 👉 **Business Focus:** Improve early-stage customer experience to reduce churn  
+
+---
 
 ## 📂 Dataset Description
 The project uses multiple datasets including:
@@ -29,6 +42,8 @@ The project uses multiple datasets including:
 - Highly imbalanced dataset (~90% non-churn)  
 - Mix of numerical and categorical features  
 - Presence of skewness and outliers  
+
+---
 
 ## 🔍 Exploratory Data Analysis (EDA)
 
@@ -67,10 +82,18 @@ Metrics used:
 - Precision  
 - Recall  
 - F1-score  
-- ROC-AUC  
+- Confusion Matrix
 
-### Key Observation:
-- Models struggle with low recall for churn class  
+## 📊 Model Comparison
+
+    | Model          | Precision (Churn) | Recall (Churn) | F1-score |
+    |----------------|------------------|----------------|----------|
+    | Random Forest  | 0.28             | 0.34           | 0.30     |
+    | XGBoost        | 0.33             | 0.30           | 0.31     |
+
+**Key Insight:**  
+- Both models struggle to effectively identify churners due to severe class imbalance.  
+- While XGBoost slightly improves precision, recall remains low (~30%), meaning many churn cases are still missed.  
 - Indicates difficulty in capturing minority class  
 
 ---
@@ -108,16 +131,16 @@ Metrics used:
 ---
 
 ## 📁 Project Structure
-customer-churn-prediction/
-│
-├── notebooks/
-│ └── churn_analysis.ipynb
-│
-├── data/
-├── outputs/
-│
-├── README.md
-└── requirements.txt
+                      customer-churn-prediction/
+                      │
+                      ├── notebooks/
+                      │ └── analysis_and_modelling.ipynb
+                      │
+                      ├── data/
+                      ├── outputs/
+                      │
+                      ├── README.md
+                      └── requirements.txt
 
 -----
 
@@ -131,12 +154,11 @@ cd customer-churn-prediction
 pip install -r requirements.txt
 jupyter notebook
 
------------------
-
+---
 ## 🌟 Key Takeaway
 
 This project demonstrates the ability to:
-- Work with real-world, messy, imbalanced data
-- Perform deep exploratory data analysis
-- Build and evaluate machine learning models
-- Translate technical results into business insights
+> Work with real-world, messy, imbalanced data
+> Perform deep exploratory data analysis
+> Build and evaluate machine learning models
+> Translate technical results into business insights
