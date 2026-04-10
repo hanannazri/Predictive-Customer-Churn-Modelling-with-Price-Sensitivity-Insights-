@@ -139,7 +139,7 @@ Metrics used:
                       ├── notebooks/
                       │ └── analysis_and_modelling.ipynb
                       │
-                      ├── data/
+                      ├── dataset/
                       ├── outputs/
                       │
                       ├── README.md
