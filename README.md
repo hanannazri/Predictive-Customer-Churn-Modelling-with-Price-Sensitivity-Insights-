@@ -169,6 +169,6 @@ jupyter notebook
 ## 📬 Contact
 
 - Name: Hanan
-- LinkedIn: https://linkedin.com/in/hanan_nazri
+- LinkedIn: https://linkedin.com/in/hanan-nazri
 - GitHub: https://github.com/hanannazri 
 - Email: hanankp283@gmail.com 
