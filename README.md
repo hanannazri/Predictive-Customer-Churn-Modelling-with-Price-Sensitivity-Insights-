@@ -102,10 +102,10 @@ Metrics used:
 ---
 
 ## 💡 Business Recommendations
-- 🎯 Focus on new customers (low tenure) for retention strategies  
-- 🚀 Improve onboarding experience to reduce early churn  
-- ⚡ Avoid relying solely on consumption-based targeting  
-- 💰 Pricing adjustments alone may not significantly reduce churn  
+-  Focus on new customers (low tenure) for retention strategies  
+-  Improve onboarding experience to reduce early churn  
+-  Avoid relying solely on consumption-based targeting  
+-  Pricing adjustments alone may not significantly reduce churn  
 
 ---
 
