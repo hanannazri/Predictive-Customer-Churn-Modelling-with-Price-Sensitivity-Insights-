@@ -1,4 +1,4 @@
-# 📊 Customer Churn Prediction & Business Insights
+# 📊 **Customer Churn Prediction & Business Insights**
 
 ![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python)
 ![ML](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange)
