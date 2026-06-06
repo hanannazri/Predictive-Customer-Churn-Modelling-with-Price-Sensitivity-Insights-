@@ -6,6 +6,7 @@
 ![XGBoost](https://img.shields.io/badge/Model-XGBoost-green)
 ![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
 
+
 This project analyzes customer churn for an energy and gas service provider by combining customer information with historical pricing data.
 
 The project started with a clear business hypothesis:
@@ -47,10 +48,10 @@ This project approaches that question from a data science perspective by combini
 
 I wanted to answer four questions:
 
-Can churn be predicted from the available data?
-Is price sensitivity actually a major churn driver?
-Which customer characteristics are associated with churn?
-What additional data would improve churn prediction?
+- Can churn be predicted from the available data?
+- Is price sensitivity actually a major churn driver?
+- Which customer characteristics are associated with churn?
+- What additional data would improve churn prediction?
 
 ---
 
