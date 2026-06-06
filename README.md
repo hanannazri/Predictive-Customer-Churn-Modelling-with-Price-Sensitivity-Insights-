@@ -11,7 +11,7 @@ This project analyzes customer churn for an energy and gas service provider by c
 
 The project started with a clear business hypothesis:
 
-> **Price sensitivity may be one of the major reasons customers are leaving the company.**
+> Price sensitivity may be one of the major reasons customers are leaving the company.
 
 From a business perspective, this is a realistic assumption. When customers leave after changes in pricing, managers may naturally suspect that price is the main reason behind churn.
 
