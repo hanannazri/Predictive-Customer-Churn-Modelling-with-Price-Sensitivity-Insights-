@@ -6,24 +6,23 @@
 ![XGBoost](https://img.shields.io/badge/Model-XGBoost-green)
 ![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
 
+This project was completed as part of the BCGX Data Science Virtual Internship and focuses on analyzing customer churn for an energy and gas service provider using customer and historical pricing data. 
 
-This project analyzes customer churn for an energy and gas service provider by combining customer information with historical pricing data.
-
-The project started with a clear business hypothesis:
+The project was built around a practical business scenario where the underlying assumption was:
 
 > **Price sensitivity may be one of the major reasons customers are leaving the company.**
 
 From a business perspective, this is a realistic assumption. When customers leave after changes in pricing, managers may naturally suspect that price is the main reason behind churn.
 
-However, as a data scientist, my role was not to accept that assumption directly. My goal was to test whether the available data actually supported it.
+However, as a data scientist, rather than accepting that assumption directly, I approached it as a testable business hypothesis. My goal was to determine whether the available data actually supported it.
 
-To do this, I explored customer behavior, pricing patterns, contract-related features, consumption trends, and churn distribution. I then engineered additional features and built machine learning models to understand how well churn could be predicted.
+To investigate this, I explored customer behaviour, pricing patterns, contract-related features, consumption trends, and churn distribution. I then engineered additional business-oriented features and developed machine learning models to evaluate how effectively churn could be predicted.
 
-The final model performance was limited, with an F1-score of around 0.30 and recall around 0.30. Instead of treating this only as a weak model result, I interpreted it as an important business signal.
+The final model performance was limited, with an F1-score of around 0.30 and recall around 0.30. Rather than treating this simply as a weak model result, I interpreted it as an important business insight.
 
-The analysis suggests that pricing may influence churn, but price sensitivity alone does not fully explain why customers leave. Churn is more likely affected by a broader combination of factors such as customer tenure, sales channel, product engagement, contract history, consumption behavior, and customer experience factors that were not available in the dataset.
+The analysis suggests that while pricing may influence customer decisions, price sensitivity alone does not fully explain why customers leave. Churn is more likely affected by a broader combination of factors such as customer tenure, sales channel, product engagement, contract history, consumption behavior, and customer experience factors that were not available in the dataset.
 
-This project helped me understand that machine learning is not only about building a predictive model. It is also about testing business assumptions, identifying data limitations, and translating technical results into business decisions.
+This project reinforced for me that data science is not only about building predictive models. It is also about testing business assumptions, understanding the limitations of available data, and translating technical findings into meaningful business decisions.
 
 ---
 
@@ -80,7 +79,7 @@ Key Characteristics:
 
 ---
 
-## 🔬 Methodology
+## 🔬 **6. Methodology**
 
 To investigate whether price sensitivity could explain customer churn, I followed a structured data science workflow.
 
