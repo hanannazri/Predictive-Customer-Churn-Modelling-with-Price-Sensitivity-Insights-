@@ -1,204 +1,372 @@
-# 📊 **Customer Churn Prediction & Business Insights**
+# 📊 **Customer Churn Prediction: Evaluating Price Sensitivity as a Business Driver**
 
 ![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python)
-![ML](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange)
 ![Random Forest](https://img.shields.io/badge/Model-RandomForest-blue)
 ![XGBoost](https://img.shields.io/badge/Model-XGBoost-green)
 ![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
 
-This project was completed as part of the BCGX Data Science Virtual Internship and focuses on analyzing customer churn for an energy and gas service provider using customer and historical pricing data. 
+---
 
-The project was built around a practical business scenario where the underlying assumption was:
+## **Business Context**
 
-> **Price sensitivity may be one of the major reasons customers are leaving the company.**
+This project was completed as part of the **BCGX Data Science Virtual Experience Program**.
 
-From a business perspective, this is a realistic assumption. When customers leave after changes in pricing, managers may naturally suspect that price is the main reason behind churn.
+The business team was working with a straightforward assumption:
 
-However, as a data scientist, rather than accepting that assumption directly, I approached it as a testable business hypothesis. My goal was to determine whether the available data actually supported it.
+> **Customers may be leaving because they are sensitive to changes in pricing.**
 
-To investigate this, I explored customer behaviour, pricing patterns, contract-related features, consumption trends, and churn distribution. I then engineered additional business-oriented features and developed machine learning models to evaluate how effectively churn could be predicted.
+If that assumption is correct, the company could potentially improve retention through pricing adjustments, targeted discounts, or promotional offers.
 
-The final model performance was limited, with an F1-score of around 0.30 and recall around 0.30. Rather than treating this simply as a weak model result, I interpreted it as an important business insight.
+However, before recommending any business action, I wanted to answer an important question:
 
-The analysis suggests that while pricing may influence customer decisions, price sensitivity alone does not fully explain why customers leave. Churn is more likely affected by a broader combination of factors such as customer tenure, sales channel, product engagement, contract history, consumption behavior, and customer experience factors that were not available in the dataset.
+**Does the available data actually support the idea that price sensitivity is one of the major drivers of customer churn?**
 
-This project reinforced for me that data science is not only about building predictive models. It is also about testing business assumptions, understanding the limitations of available data, and translating technical findings into meaningful business decisions.
+Rather than treating this as a simple machine learning exercise, I approached it as a business investigation using data.
 
 ---
 
-## 💼 **1. Business Problem**
+## **Executive Summary**
 
-For subscription-based businesses such as energy and gas providers, retaining existing customers is often more cost-effective than acquiring new ones. Even a small increase in customer churn can have a significant impact on long-term revenue and profitability.
+To evaluate the business hypothesis, I combined customer information with historical pricing records and performed a complete analytical workflow consisting of:
 
-When customers decide to leave, businesses naturally try to understand the underlying reason so that appropriate retention strategies can be developed.
+* Data understanding
+* Exploratory Data Analysis
+* Feature Engineering
+* Machine Learning Model Development
+* Business Interpretation
 
-One common assumption is that customers leave because they become sensitive to pricing changes. If this assumption is correct, the business could potentially reduce churn through pricing adjustments, discounts, or targeted promotional offers.
+After building and evaluating multiple models, I found that pricing contributes to customer churn, but it does not appear to be the dominant factor.
 
-However, acting on an incorrect assumption can be costly. Reducing prices across the customer base without understanding the true drivers of churn may lower revenue without significantly improving retention.
+Instead, the results suggest that churn is likely influenced by a broader combination of factors such as customer tenure, product engagement, sales channels, contract history, and behavioral variables that are not captured in the available dataset.
 
-This creates an important business question:
-
-> **Is price sensitivity actually a major driver of customer churn, or are customers leaving because of a broader combination of behavioural and operational factors?**
-
-This project approaches that question from a data science perspective by combining customer information with historical pricing records to evaluate whether the available data supports the business hypothesis.
-
----
-## 🎯 **2. Project Objectives**
-
-I wanted to answer four questions:
-
-- Can churn be predicted from the available data?
-- Is price sensitivity actually a major churn driver?
-- Which customer characteristics are associated with churn?
-- What additional data would improve churn prediction?
+One of the most valuable outcomes of this project was realizing that limited model performance itself can become an important business insight.
 
 ---
 
-##⚡**3. Key Findings**
+## **Business Problem**
 
-- Low-tenure customers churn more.
-- Consumption is a weak predictor.
-- Pricing contributes but is not dominant.
-- Models achieve limited recall.
-- The results suggest missing behavioural factors.
+For subscription-based businesses such as energy and gas providers, customer retention directly impacts long-term profitability.
 
-> Business Insight: **Price sensitivity alone does not fully explain customer churn.**
+Reducing churn by even a small percentage can generate significant business value.
 
----
+A common business assumption is that customers leave primarily because of pricing changes.
 
-## 📂 **5. Dataset Description**
+If true, management could focus on:
 
-The Multiple datasets includes:
-- ~14,600 customers  
-- ~193,000 pricing records  
+* Discount campaigns
+* Promotional pricing
+* Tariff restructuring
 
-Key Characteristics:
-- Highly imbalanced dataset (~90% non-churn)  
-- Mix of numerical and categorical features  
-- Presence of skewness and outliers  
+However, implementing these strategies without evidence can reduce revenue while having little effect on retention.
+
+The goal of this project was to determine whether the available data supports that assumption.
 
 ---
 
-## 🔬 **6. Methodology**
+## **Project Objective**
 
-To investigate whether price sensitivity could explain customer churn, I followed a structured data science workflow.
+Through this analysis, I wanted to answer four practical questions:
 
-### 1. Data Understanding
-
-- Examined customer and pricing datasets.
-- Understood feature definitions.
-- Identified missing values and data quality issues.
-
-### 2. Exploratory Data Analysis
-
-- Analyzed churn distribution.
-- Studied customer tenure.
-- Investigated energy consumption patterns.
-- Explored pricing behaviour.
-
-### 3. Feature Engineering
-
-- Log transformations.
-- Consumption change metrics.
-- Cost pressure features.
-- Tenure groups.
-- Product engagement features.
-
-### 4. Model Development
-
-- Random Forest
-- XGBoost
-
-### 5. Model Evaluation
-
-- Precision
-- Recall
-- F1-score
-- Confusion Matrix
-
-> ⚠️ Special emphasis was placed on recall because of the severe class imbalance.
-
-## 📊 **7. Results & Model Performance**
-
-| Model          | Precision (Churn) | Recall (Churn) | F1-score |
-|----------------|------------------|----------------|----------|
-| Random Forest  | 0.28             | 0.34           | 0.30     |
-| XGBoost        | 0.33             | 0.30           | 0.31     |
-
-**Key Insight:**  
-- Both models struggle to effectively identify churners due to severe class imbalance.  
-- While XGBoost slightly improves precision, recall remains low (~30%), meaning many churn cases are still missed.  
-- Indicates difficulty in capturing minority class  
+* Can customer churn be predicted using the available data?
+* Is price sensitivity actually a major contributor to churn?
+* Which customer characteristics appear most associated with churn?
+* What additional business data would improve prediction performance?
 
 ---
 
-## 💡 **8. Business Interpretation**
+## **Dataset Overview**
 
-- If pricing alone were the dominant churn driver, stronger predictive performance would be expected. 
-- The relatively low recall suggests that important customer behaviours are not represented in the available data.
+The analysis combines two datasets.
 
----
+### **Customer Dataset**
 
-## 📋 **9. Business Recommendations**
+Approximately **14,600 customers** containing information related to:
 
-What should the company do?
+* Customer tenure
+* Product subscriptions
+* Sales channels
+* Energy consumption
+* Margins
+* Forecast pricing
+* Contract dates
+* Churn status
 
-Focus on new customers.
-Improve onboarding.
-Collect complaint history.
-Combine pricing with behavioural analytics.
+### **Historical Pricing Dataset**
 
----
+Approximately **193,000 pricing records** containing:
 
-## ⚠️ **10. Limitations**
-- Severe class imbalance affects model performance  
-- Low recall indicates many churners are still missed  
-- Limited behavioral features in dataset  
+* Variable tariffs
+* Fixed tariffs
+* Peak pricing
+* Mid-peak pricing
+* Off-peak pricing
+* Historical monthly pricing information
 
----
+**Dataset Characteristics**
 
-## 🔮 **11. Future Improvements**
-- Apply advanced resampling techniques (e.g., SMOTE)  
-- Experiment with ensemble and stacking models  
-- Incorporate customer behavior and interaction data  
-- Deploy model using a web app (Streamlit)  
-
----
-
-## 🛠 **Tech Stack**
-- Python  
-- Pandas
-- NumPy  
-- Matplotlib
-- Seaborn  
-- Scikit-learn  
-- XGBoost  
+* Highly imbalanced target variable
+* Roughly 90% retained customers
+* Mixed numerical and categorical features
+* Strong skewness in consumption variables
+* Multiple business entities requiring transformation
 
 ---
 
-## 📁 Project Structure
-                      customer-churn-prediction/
-                      │
-                      ├── notebooks/
-                      │ └── analysis_and_modelling.ipynb
-                      │
-                      ├── dataset/
-                      ├── outputs/
-                      │
-                      ├── README.md
-                      └── requirements.txt
+## **Exploratory Data Analysis**
+
+Before building any predictive models, I wanted to understand whether the business assumption could already be observed through the data.
+
+**1. Customer Churn Distribution**
+
+The first observation was the severe class imbalance, with churn representing only a small portion of the customer base.
+
+This immediately influenced my evaluation strategy, since overall accuracy would not be sufficient for measuring model quality.
+
+**2. Customer Tenure**
+
+I explored whether the length of the customer relationship influenced retention.
+
+The analysis showed that lower-tenure customers were considerably more likely to churn, suggesting that onboarding and early customer engagement may play an important role.
+
+**3. Consumption Behaviour**
+
+I investigated both raw and log-transformed consumption values to better understand customer usage patterns.
+
+Although churned customers showed slightly different distributions, there was substantial overlap between both groups, indicating that consumption alone was not a strong predictor.
+
+**4. Pricing Behaviour**
+
+Since the original business question focused on price sensitivity, I carefully explored pricing variables across historical records.
+
+I examined forecast pricing, variable tariffs, fixed tariffs, and monthly pricing behaviour to determine whether pricing alone could clearly distinguish churners from retained customers.
+
+The analysis suggested that pricing contributes useful information but does not independently explain customer churn.
+
+**5. Customer Segmentation**
+
+I also explored churn across:
+
+* Product engagement levels
+* Billing segments
+* Sales channels
+* Margin groups
+
+This helped identify customer groups that may require different retention strategies.
 
 ---
 
-## 🌟 15. Final Takeaway
+## **Feature Engineering**
 
-> This project taught me that data science is not only about building accurate models. It is also about testing business assumptions, understanding data limitations, and translating analytical findings into actionable business decisions.
+Rather than relying only on the original variables, I created additional business-oriented features designed to better represent customer behaviour.
+
+**1. Consumption Features**
+
+To reduce skewness and capture usage changes over time, I engineered:
+
+* Log-transformed consumption
+* Consumption change metrics
+* Consumption ratios
+
+These features help describe how customer behaviour evolves rather than simply measuring absolute usage.
+
+**2. Customer Value Features**
+
+To better represent the customer's financial relationship with the company, I created:
+
+* Estimated billing values
+* Discount estimates
+* Cost pressure indicators
+* Net value scores
+* Value-to-cost ratios
+
+The intention was to approximate how customers may perceive the value they receive from the service.
+
+**3. Contract and Lifecycle Features**
+
+Customer lifecycle often influences retention.
+
+To capture this, I engineered features including:
+
+* Customer tenure groups
+* Days until contract renewal
+* Days since product modification
+
+These variables help represent the stage of the customer's journey.
+
+**4. Customer Segmentation Features**
+
+I transformed several continuous variables into business-friendly categories:
+
+* Billing buckets
+* Margin bins
+* Product engagement groups
+* Sales channel categories
+
+This allows the models to better capture differences between customer segments.
 
 ---
 
-### 🔗 **Connect**
+## **Model Development**
 
-- Name: Hanan
-- LinkedIn: https://linkedin.com/in/hanan-nazri
-- GitHub: https://github.com/hanannazri 
-- Email: hanankp283@gmail.com 
+After completing exploratory analysis and feature engineering, I trained two ensemble machine learning models.
+
+### **Random Forest**
+
+Random Forest was selected as a robust baseline model capable of capturing non-linear relationships while remaining relatively interpretable.
+
+### **XGBoost**
+
+XGBoost was used to model more complex interactions between engineered features and compare its performance against the Random Forest baseline.
+
+---
+
+## **Evaluation Strategy**
+
+The dataset contains a significant class imbalance, making accuracy an unreliable metric.
+
+Instead, I focused primarily on:
+
+* Precision
+* Recall
+* F1-score
+* Confusion Matrix
+
+> Special emphasis was placed on recall, since failing to identify customers who are likely to churn can directly affect business retention efforts.
+
+---
+
+## **Model Performance**
+
+| Model         | Precision | Recall | F1-Score |
+| ------------- | --------- | ------ | -------- |
+| Random Forest | 0.28      | 0.34   | 0.30     |
+| XGBoost       | 0.33      | 0.30   | 0.31     |
+
+---
+
+## **Business Interpretation**
+
+At first glance, these results may appear modest.
+
+However, I believe they provide one of the most valuable findings from the project.
+
+If price sensitivity were truly the dominant reason customers leave, I would expect pricing-related variables to allow the models to identify churners much more effectively.
+
+Instead, the relatively low recall suggests that important aspects of customer behaviour are missing from the available dataset.
+
+Potential missing factors include:
+
+* Customer complaints
+* Service quality issues
+* Customer support interactions
+* Satisfaction metrics
+* Service disruptions
+* Competitor offers
+
+In other words,
+
+> **Price sensitivity appears to be part of the story, but not the entire story.**
+
+---
+
+## **Business Recommendations**
+
+Based on the analysis, I would recommend that the business:
+
+**1. Improve Early Customer Engagement**
+
+Lower-tenure customers appear more vulnerable to churn.
+
+Strengthening onboarding and early relationship management may improve retention.
+
+**2. Expand Data Collection**
+
+Future predictive systems should include:
+
+* Complaint history
+* Support tickets
+* Customer satisfaction surveys
+* Service interruption records
+
+**3. Combine Pricing with Behavioral Analytics**
+
+Rather than relying solely on discounts, retention strategies should integrate both financial and customer experience factors.
+
+---
+
+## **Project Limitations**
+
+* Severe class imbalance
+* Limited behavioral information
+* Absence of customer interaction data
+* External market factors unavailable
+
+---
+
+## **Future Improvements**
+
+Potential next steps include:
+
+* Applying advanced resampling techniques
+* Hyperparameter optimization
+* SHAP-based model explainability
+* Ensemble and stacking methods
+* Streamlit deployment
+* MLflow experiment tracking
+* Building a complete end-to-end MLOps pipeline
+
+---
+
+## **Tech Stack**
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-learn
+* XGBoost
+
+---
+
+## **Repository Structure**
+
+```text
+customer-churn-price-sensitivity/
+│
+├── notebooks/
+│   └── analysis_and_modelling.ipynb
+│
+├── dataset/
+│
+├── outputs/
+│
+├── README.md
+│
+└── requirements.txt
+```
+
+---
+
+## **Final Reflection**
+
+What I found most interesting about this project was that the model itself became part of the business answer.
+
+I started with the assumption that price sensitivity might explain why customers leave.
+
+After exploring the data, engineering business-oriented features, and evaluating multiple machine learning models, the evidence suggested that churn is likely a much broader behavioral problem.
+
+This project reinforced for me that data science is not only about building predictive models.
+
+It is also about challenging assumptions, understanding the limitations of available data, and translating technical analysis into practical business decisions.
+
+---
+
+## **Connect**
+
+**Hanan**
+
+* LinkedIn: https://linkedin.com/in/hanan-nazri
+* GitHub: https://github.com/hanannazri
+* Email: [hanankp283@gmail.com](mailto:hanankp283@gmail.com)
