@@ -108,9 +108,9 @@ Before beginning the analysis, I evaluated the overall quality of the dataset.
 
 The client dataset contains a mixture of numerical and categorical variables. Several consumption-related features exhibited strong right-skewness and extreme observations, motivating later transformations during feature engineering.
 
-#### **1. Data Understanding**
+### **1. Data Understanding**
 
-**1.1 Churn Distribution**
+### **1.1 Churn Distribution**
 
 The first step was to understand the scale of the churn problem itself.
 
@@ -118,7 +118,7 @@ The dataset is highly imbalanced, with approximately 90% of customers remaining 
 
 This imbalance is common in real-world churn prediction problems and immediately influenced the modelling strategy adopted later in the project. Rather than relying on overall accuracy, greater emphasis would eventually be placed on Precision, Recall, and F1-score.
 
-**1.2 Energy Consumption Distribution**
+### **1.2 Energy Consumption Distribution**
 
 I explored the distribution of annual electricity consumption to understand customer usage behaviour.
 
@@ -126,7 +126,7 @@ The analysis showed that energy consumption is heavily right-skewed, with a rela
 
 This observation suggested that raw consumption values might not be ideal for modelling directly and motivated the creation of `cons_12m_log` during the feature engineering stage.
 
-**1.3 Last Month Energy Consumption**
+### **1.3 Last Month Energy Consumption**
 
 In addition to annual consumption, I also explored customer energy usage during the most recent month.
 
@@ -134,27 +134,27 @@ Comparing recent consumption with long-term behaviour provides useful insight in
 
 Although some differences were observed across customers, the distributions still showed substantial overlap between churned and retained groups, suggesting that recent consumption alone was unlikely to fully explain customer churn.
 
-**1.4 Gas Consumption Distribution**
+### **1.4 Gas Consumption Distribution**
 
 Gas consumption was analysed separately from electricity consumption to determine whether it provided additional information regarding customer behaviour.
 
 Similar to electricity usage, gas consumption displayed a highly skewed distribution. After examining both the raw and transformed distributions, it became evident that gas consumption alone was unlikely to serve as a strong standalone predictor of churn.
 
-#### **2. Customer Behaviour Analysis**
+### **2. Customer Behaviour Analysis**
 
-**2.1 Comparison of Energy Consumption with Churn**
+### **2.1 Comparison of Energy Consumption with Churn**
 
 After understanding the overall consumption distributions, I compared the distributions of annual electricity consumption for churned and retained customers to determine whether usage behaviour alone could explain customer attrition.
 
 Although churned customers exhibited slightly different consumption patterns, the overlap between both groups remained considerable. This suggests that while consumption contributes some information, it does not independently explain customer churn.
 
-**2.2 Comparison of Gas Consumption with Churn**
+### **2.2 Comparison of Gas Consumption with Churn**
 
 A similar comparison was performed using gas consumption.
 
 The analysis revealed only modest differences between churned and retained customers, reinforcing the idea that customer behaviour is influenced by factors beyond simple energy usage.
 
-**2.3 Product Engagement with Churn**
+### **2.3 Product Engagement with Churn**
 
 I investigated the relationship between the number of active products and customer churn.
 
@@ -162,7 +162,7 @@ Rather than assuming that customers with more products are automatically more lo
 
 The results provided additional context regarding customer behaviour and highlighted the importance of considering engagement alongside pricing variables.
 
-**2.4 Tenure with Churn**
+### **2.4 Tenure with Churn**
 
 Customer tenure was one of the most informative variables explored during the EDA process.
 
@@ -199,27 +199,27 @@ Since pricing information spans multiple periods, maintaining consistency across
 
 ### **3. Price Sensitivity Analysis**
 
-**3.1 Time-Based Analysis**
+### **3.1 Time-Based Analysis**
 
 Since pricing records were collected across multiple time periods, I first analysed how variable and fixed pricing components evolved over time. This helped determine whether consistent pricing trends or seasonal patterns existed that could potentially influence customer churn.
 
-**3.2 Distribution of Variable Price Analysis**
+### **3.2 Distribution of Variable Price Analysis**
 
 The distribution of variable pricing components was analysed to understand their overall behaviour across the customer base.
 
 The analysis showed natural variation in customer pricing, but no immediately obvious separation between churned and retained customers.
 
-**3.3 Distribution of Fixed Price Analysis**
+### **3.3 Distribution of Fixed Price Analysis**
 
 Fixed pricing components were also explored independently.
 
 Comparing the distributions of fixed and variable prices provided additional context regarding how pricing structures are represented within the dataset.
 
-**3.4 Relationship Between Pricing Features**
+### **3.4 Relationship Between Pricing Features**
 
 To better understand interactions between different pricing variables, I explored the relationships between pricing variables to understand how different pricing components interacted and whether certain features provided redundant information. This analysis also provided insight into how different pricing components move together across the customer base.
 
-**3.5 Fixed vs Variable Price Analysis**
+### **3.5 Fixed vs Variable Price Analysis**
 
 Finally, I compared the behaviour of fixed and variable pricing structures to determine whether one appeared to have a stronger association with customer churn. Although both contributed useful information, neither independently provided a clear separation between churned and retained customers.
 
@@ -282,7 +282,7 @@ While the original dataset provides operational information, many business relat
 
 To better capture customer behaviour and price sensitivity, I engineered several additional features.
 
-**3.1 Consumption Behaviour Features**
+### **3.1 Consumption Behaviour Features**
 
 Rather than relying only on absolute consumption values, I created variables that describe how customer usage changes over time.
 
@@ -293,7 +293,7 @@ The following features were engineered:
 
 These variables help capture whether recent customer activity differs significantly from long-term consumption behaviour.
 
-**3.2 Estimated Billing and Discount Features**
+### **3.2 Estimated Billing and Discount Features**
 
 Since pricing is central to the business hypothesis, I engineered estimated customer billing behaviour by combining pricing and consumption information.
 
@@ -309,7 +309,7 @@ To further improve interpretability, these values were later grouped into:
 
 These features help investigate whether customers experiencing different estimated billing levels exhibit different churn behaviour.
 
-**3.3 Cost Pressure and Customer Value Features**
+### **3.3 Cost Pressure and Customer Value Features**
 
 One of the main objectives of this project was to evaluate whether customers become sensitive to pricing.
 
@@ -321,7 +321,7 @@ To better represent this relationship, I engineered variables that combine prici
 
 Rather than measuring pricing alone, these variables attempt to capture the balance between the costs customers incur and the value they receive from the service.
 
-**3.4 Contract Timeline Features**
+### **3.4 Contract Timeline Features**
 
 Customer lifecycle events often influence retention decisions.
 
@@ -332,7 +332,7 @@ To incorporate these effects, I engineered contract-related timeline variables:
 
 These features provide additional information about where a customer is positioned within their contractual relationship with the company.
 
-**3.5 Price Change Features: January vs December**
+### **3.5 Price Change Features: January vs December**
 
 Since the central business hypothesis focuses on price sensitivity, I investigated whether changes in pricing between different periods could provide additional predictive information.
 
@@ -347,7 +347,7 @@ Using the historical pricing dataset, I created the following price change featu
 
 These variables capture the differences between January and December pricing observations.
 
-**3.6 Monthly Price Difference Features**
+### **3.6 Monthly Price Difference Features**
 
 In addition to the January versus December comparison, I engineered features describing the maximum monthly differences across the pricing history.
 
@@ -362,7 +362,7 @@ The following variables were created:
 
 These features provide a broader representation of how customer pricing evolves over time.
 
-**3.7 Margin Redundancy Check**
+### **3.7 Margin Redundancy Check**
 
 Before finalising the modelling dataset, I evaluated the relationship between existing margin-related variables and the newly engineered customer value features.
 
@@ -450,19 +450,19 @@ This ensures that model performance is evaluated on unseen data and provides a r
 
 Random Forest was selected as the first modelling approach because of its ability to capture non-linear relationships while remaining relatively robust to noisy and complex business data.
 
-**Baseline Random Forest**
+### **Baseline Random Forest**
 
 The baseline Random Forest model was trained using the engineered feature set without additional optimisation.
 
 This provided an initial benchmark for understanding how effectively the available data could identify churned customers.
 
-**Threshold Optimization**
+### **Threshold Optimization**
 
 Because churn prediction is a highly imbalanced classification problem, the default classification threshold may not provide the best balance between Precision and Recall.
 
 To improve churn detection performance, I evaluated different probability thresholds and selected the threshold that produced a stronger balance between identifying churners and controlling false positives.
 
-**SMOTE with Threshold Optimization**
+### **SMOTE with Threshold Optimization**
 
 To further address class imbalance, I applied SMOTE (Synthetic Minority Oversampling Technique) to the training data.
 
@@ -476,35 +476,35 @@ The Random Forest experiments demonstrated that both threshold optimisation and 
 
 However, overall performance remained limited, suggesting that important drivers of churn may not be fully represented within the available dataset.
 
-## **3. XGBoost**
+### **3. XGBoost**
 
 Following the Random Forest experiments, I trained an XGBoost model to evaluate whether a gradient boosting approach could better capture complex interactions between customer behaviour, pricing dynamics, and contract information.
 
-**Baseline XGBoost**
+### **Baseline XGBoost**
 
 The baseline XGBoost model was trained using the same engineered feature set and evaluation framework used for Random Forest.
 
 This provided a consistent basis for comparing both modelling approaches.
 
-**Threshold Optimization**
+### **Threshold Optimization**
 
 Similar to the Random Forest workflow, threshold optimisation was applied to improve the balance between Precision and Recall.
 
 The objective was to identify a classification threshold that better aligned with the business goal of detecting customers who are likely to churn.
 
-**Tuned XGBoost Model**
+### **Tuned XGBoost Model**
 
 After evaluating the baseline model, hyperparameter tuning was performed to further improve predictive performance.
 
 This stage focused on optimising model complexity and learning behaviour while maintaining generalisation performance on unseen data.
 
-**XGBoost Summary**
+### **XGBoost Summary**
 
 Across the different experiments, XGBoost demonstrated slightly stronger predictive performance than Random Forest and showed a greater ability to identify churned customers.
 
 This made it the strongest candidate for final model selection.
 
-## **4. Final Model Comparison & Selection**
+### **4. Final Model Comparison & Selection**
 
 | Model Configuration | Precision (Churn) | Recall (Churn) | F1-score (Churn) | Accuracy |
 |-----------------------|------------------|----------------|------------------|----------|
@@ -515,9 +515,7 @@ Both models achieved similar overall performance, but the tuned XGBoost model ac
 
 The comparison shows that churn prediction remains challenging, highlighting the limitations of the available dataset and the absence of behavioural variables that may influence customer retention.
 
----
-
-## **5. Business-focused Confusion Matrix Analysis**
+### **5. Business-focused Confusion Matrix Analysis**
 
 Although the overall evaluation metrics were similar, the confusion matrix analysis revealed an important difference.
 
@@ -529,9 +527,8 @@ Although the overall evaluation metrics were similar, the confusion matrix analy
 The tuned XGBoost model correctly identified nine additional churn customers compared to the best-performing Random Forest model.
 
 From a business perspective, each correctly identified churn customer represents an opportunity for targeted retention efforts. For this reason, the additional churn detection capability provided by XGBoost was considered more valuable than the slight increase in false positives.
----
 
-## **6. Final Model Selection**
+### **6. Final Model Selection**
 
 After comparing all modelling approaches, the tuned XGBoost model was selected as the final model.
 
